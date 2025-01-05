@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    const divElement = document.getElementById("myDiv");
+    if (divElement && divElement.hasOwnProperty("textContent")) {
+      const divContent = divElement.textContent;
+      console.log(divContent); //Access only if the property exists
+    } else {
+      console.log("Property does not exist.");
+    }
+  </script>
+</body>
+</html>
